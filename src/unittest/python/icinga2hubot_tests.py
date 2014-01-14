@@ -122,8 +122,7 @@ class TestIcinga2Hubot(unittest.TestCase):
         mock_config_parser_creator.return_value = mock_config_parser
         mock_config_parser.items.return_value = [('any_key', self.ANY_URL)]
 
-        with self.assertRaises(ValueError):
-            icinga2hubot._parse_config_file(ANY)
+        self.assertRaises(ValueError, icinga2hubot._parse_config_file, ANY)
 
     @patch('os.environ')
     def test__read_icinga_data_from_env_should_return_a_dict_of_all_icinga_data(self,
