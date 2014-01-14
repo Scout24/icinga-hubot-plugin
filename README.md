@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ImmobilienScout24/icinga-hubot-plugin.png?branch=master)](https://travis-ci.org/ImmobilienScout24/icinga-hubot-plugin)
 # Hubot Plugin for Icinga
 
 Sends all Icinga environment variables as json to a configurable http endpoint. 
