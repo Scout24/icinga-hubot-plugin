@@ -1,4 +1,5 @@
 .coverage
 target/
 venv/
+*.py[co]
 
