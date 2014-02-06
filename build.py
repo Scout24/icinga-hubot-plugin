@@ -21,9 +21,12 @@ def set_properties(project):
     project.build_depends_on("pylint")
     project.build_depends_on("mock")
     project.build_depends_on("docopt")
+
     project.set_property('copy_resources_target', '$dir_dist')
     project.get_property('copy_resources_glob').extend(['setup.cfg'])
+
     project.install_file('/usr/lib64/icinga/plugins', 'icinga2hubot.py')
+    project.install_file('/etc/icinga/conf.d/commands', 'icinga2hubot.cfg')
 
 
 @init(environments='teamcity')
